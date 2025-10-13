@@ -1,0 +1,72 @@
+\chapter{Review of Literature}
+In this chapter include a critical appraisal of the previous work published in the literature pertaining to the topic of the investigation. This review examines recent advances in machine learning-based URL threat detection and phishing prevention systems.
+
+\section{Review of Paper 1: Efficient Chrome Extension for Phishing Detection Using Machine Learning Techniques} 
+
+\subsection*{Methodology and Approach}
+Tha¸ci et al. (2024) developed a Chrome extension called "NoPhish" that employs machine learning techniques for real-time phishing detection. Their approach utilized a dataset from PhishTank containing 22 features rated by Alexa database, implementing three classification algorithms: Random Forest, Support Vector Machine (SVM), and k-Nearest Neighbor (kNN). The system operates as middleware between users and potentially malicious websites, providing immediate threat assessment during web browsing.\cite{arxiv5}
+
+\subsection*{Strengths and Contributions}
+\begin{itemize}
+	\item Practical implementation as a browser extension for real-world deployment
+	\item Comprehensive feature extraction covering URL characteristics, domain properties, and content analysis
+	\item Comparative evaluation of multiple machine learning algorithms with Random Forest achieving best precision
+	\item Integration of both heuristic analysis and machine learning for enhanced detection capabilities
+	\item Focus on user accessibility regardless of cybersecurity expertise level
+\end{itemize}
+
+\subsection*{Limitations and Gaps}
+\begin{itemize}
+	\item Limited to Chrome browser ecosystem, restricting cross-platform compatibility
+	\item Dependency on PhishTank dataset may introduce bias toward known attack patterns
+	\item No discussion of computational overhead or real-time performance metrics
+	\item Lack of evaluation against zero-day phishing attacks or sophisticated evasion techniques
+	\item Absence of community feedback mechanisms for continuous model improvement
+\end{itemize}
+
+\section{Review of Paper 2: Website Phishing Detection Using Machine Learning Techniques}
+
+\subsection*{Methodology and Approach}
+Alazaidah et al. (2024) conducted a comprehensive comparison of 24 different classifiers across six learning strategies for phishing website detection. Their methodology evaluated classifiers including Bayesian methods, function-based approaches, lazy learning, meta-learning, rule-based systems, and tree-based algorithms. The study employed two datasets with different characteristics and assessed performance using eight evaluation metrics including accuracy, precision, recall, F-score, and ROC area.\cite{arxiv}
+
+\subsection*{Strengths and Contributions}
+\begin{itemize}
+	\item Systematic evaluation of multiple machine learning paradigms providing comprehensive performance comparison
+	\item Use of diverse evaluation metrics ensuring robust performance assessment
+	\item Analysis of feature selection methods including InfoGainAttributeEval for optimal feature identification
+	\item Demonstration of Random Forest, FilteredClassifier, and J-48 superiority in phishing detection
+	\item Consideration of both binary and multi-class classification scenarios
+\end{itemize}
+
+\subsection*{Limitations and Gaps}
+\begin{itemize}
+	\item Limited dataset size potentially affecting generalization capabilities
+	\item Lack of real-time performance evaluation and computational complexity analysis
+	\item No consideration of adversarial attacks or evasion techniques
+	\item Absence of hybrid or ensemble approaches beyond individual classifier comparison
+	\item Limited discussion of deployment considerations and scalability issues
+\end{itemize}
+
+\section{Review of Paper 3: Website Phishing Attack Detection Using Innovative Meta Learning-Based Ensemble Approach}.
+
+\subsection*{Methodology and Approach}
+Naseeb et al. (2025) proposed a novel stacked ensemble model combining Artificial Neural Networks (ANN) and Bagging K-Nearest Neighbors (KNN) with Logistic Regression as a meta-learner classifier. Their hybrid framework leveraged ANN's capability for global non-linear pattern identification and Bagging KNN's proficiency in local pattern detection. The system incorporated SMOTE oversampling for class imbalance handling and employed k-fold cross-validation for robust performance validation using 2019-2024 datasets.\cite{IEEE}
+
+\subsection*{Strengths and Contributions}
+\begin{itemize}
+	\item Innovative stacking ensemble approach combining complementary machine learning paradigms
+	\item Impressive performance metrics achieving 97.20\% accuracy, 97\% precision, and 97\% recall
+	\item Comprehensive preprocessing pipeline including SMOTE for class imbalance mitigation
+	\item Real-time optimization using TensorFlow Lite for edge-level deployment feasibility
+	\item Use of contemporary datasets spanning 2019-2024 ensuring relevance to current threat landscape
+	\item Detailed hyperparameter optimization with 512-256-128-128 layer ANN architecture
+\end{itemize}
+
+\subsection*{Limitations and Gaps}
+\begin{itemize}
+	\item High computational complexity may limit real-time deployment in resource-constrained environments
+	\item Dependency on balanced datasets through SMOTE may not reflect real-world class distributions
+	\item Limited evaluation against adversarial examples or sophisticated attack variations
+	\item Lack of comparison with recent deep learning approaches such as transformer-based models
+	\item No discussion of model interpretability or explainability for security practitioners
+\end{itemize}

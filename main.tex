@@ -1,0 +1,195 @@
+\documentclass[12pt,a4paper,twoside,openany]{report}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tocloft} % for formatting TOC
+\usepackage{titlesec} % for formatting headings
+\usepackage{subcaption}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{pdfpages}
+
+
+% Enable text wrapping and define style
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{wrappedstyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 % Enable line breaking
+	breakautoindent=true,            % Maintain indentation on broken lines
+	breakindent=0pt,                 % Indentation of broken lines
+	postbreak=\space\space\space,    % Add spaces after break
+	prebreak=\space,                 % Add space before break
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2,
+	frame=single,
+	linewidth=\textwidth,            % Set line width to text width
+	xleftmargin=0pt,                 % Remove left margin
+	xrightmargin=0pt                 % Remove right margin
+}
+
+\lstset{style=wrappedstyle}
+
+\usepackage[backend=biber,style=ieee]{biblatex}  % preamble
+\addbibresource{references.bib} 
+\DefineBibliographyStrings{english}{
+	bibliography = {References},
+}
+
+% Force dotted leaders
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+\renewcommand{\cftsubsecdotsep}{\cftdotsep}
+
+% Line spacing
+% --- Page Setup ---
+\geometry{
+	a4paper,
+	left=3cm,
+	right=2cm,
+	top=1.5cm,
+	bottom=2.2cm
+}
+
+\onehalfspacing
+
+% Start Here
+\begin{document}
+	
+	\begin{titlepage}
+		\centering
+		\vspace*{0.2cm}
+		\Large  {Project Synopsis Report} \\[0.1cm]
+		\large on \\[0.1cm]
+		\Huge \textbf{CyberSentinel : A smart cyber guard that continuously watches and blocks threats} \\[0.5cm]
+		\large  {Submitted in partial fulfillment of the requirements of the degree of} \\[0.5cm]
+		\Large \textbf{Bachelors of Engineering (B.E.)} \\[0.5cm]
+		\large by \\[0.2cm]
+		\large \textbf{Mohataseem Khan } (UIN: 221P011) \\
+		\large \textbf{Rehan Khan } (UIN: 221P017) \\
+		\large \textbf{Shaikh Saad } (UIN: 221P024) \\
+		\large \textbf{Ansari Husain } (UIN: 221P004) \\ [1cm]
+		 
+		
+		\large {Guide:} \\ 
+		\large \textbf{Prof. Mohd. Juned} \\[0.5cm]
+		
+		\includegraphics[width=0.18\textwidth]{images/rcoe-logo.png}\\
+		\Large \textbf{ Department of Computer Engineering} \\
+		{\LARGE Rizvi College of Engineering} \\[0.5cm]
+		
+		\includegraphics[width=0.15\textwidth]{images/mu-logo.png}\\
+		\LARGE \textbf{University of Mumbai} \\
+		2025--2026 \\
+	\end{titlepage}
+	
+	% Certificate
+	\chapter*{\centering \textit {Certificate}}
+	This is to certify that the project synopsis entitled “CyberSentinel : A smart cyber guard that continuously watches and blocks threats” has been submitted by Mohataseem Khan, Rehan Khan, Shaikh Saad and Ansari Husain under the guidance of Prof. Mohd. Juned in partial fulfillment of the requirement for the award of the Degree of Bachelor of Engineering in Computer Engineering from Rizvi College of Engineering, University of Mumbai.
+	
+	\vspace{1.5cm}
+	\begin{flushleft}
+	\begin{tabular}{p{10cm} p{10cm}}
+		\underline{\hspace{5cm}} & \underline{\hspace{5cm}} \\
+		Prof. Mohd. Juned & Prof. Mohd. Juned \\
+		Project Guide & Head of Department \\
+	\end{tabular}
+	
+	\vspace{1.5cm}
+	\begin{tabular}{p{10cm} p{10cm}}
+		\underline{\hspace{5cm}} & \underline{\hspace{5cm}} \\
+		Internal Examiner & External Examiner \\
+	\end{tabular}
+	
+	
+	\vspace{1.5cm}
+	\begin{tabular}{p{10cm} p{10cm}}
+		\underline{\hspace{5cm}} & \underline{\hspace{5cm}} \\
+		Assoc. Prof. Shiburaj Pappu & Dr. Varsha Shah \\
+		Dean of Academics & Principal \\
+	\end{tabular}
+
+	\end{flushleft}
+	
+	\vspace{1cm}
+	\begin{center}
+	\includegraphics[width=0.18\textwidth]{images/rcoe-logo.png}\\
+	\large \textbf{Department of Computer Engineering} \\
+	\Large \textbf{Rizvi College of Engineering} \\
+	\normalsize {Off Carter Road, Bandra(W), Mumbai-400050.}
+	\end{center}
+	
+	% Declaration
+	\chapter*{Declaration}
+	I declare that this written submission represents my ideas in my own words and where others' ideas or words have been included, I have adequately cited and referenced the original sources. I also declare that I have adhered to all principles of academic honesty and integrity and have not misrepresented or fabricated or falsified any idea/data/fact/source in my submission. I understand that any violation of the above will be cause for disciplinary action by the Institute and can also evoke penal action from the sources which have thus not been properly cited or from whom proper permission has not been taken when needed.
+	
+	\vspace{1cm}
+	\begin{flushright}
+		(Signature) \\[0.5cm]
+		(Mohataseem Khan 15) \\
+		(Rehan Khan 17) \\
+		(Shaikh Saad 43) \\
+		(Ansari Husain 01) \\
+		Date:
+	\end{flushright}
+	
+	% Abstract
+	\chapter*{Abstract}
+	CyberSentinel represents an advanced cybersecurity solution designed to address the escalating threat of malicious URLs and cyber attacks that pose significant risks to individuals and organizations in the digital landscape. This project aims to develop a comprehensive real-time URL threat detection system that leverages machine learning algorithms, heuristic analysis, and community-driven feedback mechanisms to identify and classify various types of cyber threats including benign websites, defacement attempts, malware distribution, and phishing attacks. \\
+	
+	The system architecture employs a multi-layered approach combining traditional heuristic detection methods with advanced machine learning models trained on extensive datasets containing over 651,191 URLs across four distinct threat categories. The machine learning component utilizes feature engineering techniques that extract lexical, structural, host-based, and behavioral patterns from URLs to achieve high-accuracy threat classification. Key features extracted include URL length characteristics, character distributions, domain age analysis, SSL certificate validation, subdomain enumeration, and suspicious pattern recognition.\\
+	
+	The project implementation follows a modern web application architecture using the MERN stack (MongoDB, Express.js, React, Node.js) complemented by a Flask microservice for machine learning model serving. The frontend interface, built with React and Tailwind CSS, provides an intuitive user experience with real-time URL analysis capabilities, comprehensive threat reporting, and a community feedback system that enables continuous model improvement through user-contributed threat intelligence.\\
+	
+	A significant innovation of CyberSentinel is its community-driven learning mechanism, which allows users to report false positives, false negatives, and newly discovered threats. This feedback loop creates a continuous improvement cycle where the machine learning model adapts to emerging threat patterns and reduces classification errors over time. The system incorporates advanced validation mechanisms to ensure feedback quality and prevent manipulation of the learning process. \\
+	
+	
+	
+	\textbf{Keywords:} Cybersecurity, Machine Learning, URL Threat Detection, Phishing Detection, Malware Analysis, Web Security, Real-time Protection, Community Intelligence, MERN Stack, Heuristic Analysis
+	
+	% TOC
+	\newpage
+	\tableofcontents
+	
+	% Chapters
+	\include{chapters/intro}
+	
+	\include{chapters/literature}
+
+	\include{chapters/proposed}
+	
+	\include{chapters/plan}
+
+	\include{chapters/conclusions}
+	
+	\printbibliography
+
+	\include{publications}
+	
+\end{document}
