@@ -1,0 +1,108 @@
+
+\appendix
+\chapter{Appendix}
+
+This appendix provides key implementation snippets from the CyberSentinel system, including machine learning training, feature extraction, and API integration.
+
+\section{URL Feature Extraction Code}
+
+\begin{lstlisting}[language=Python, caption=URL Feature Extraction for CyberSentinel, label=lst:feature_extraction]
+	import re
+	from urllib.parse import urlparse
+	
+	def extract_features(url):
+	features = {}
+	
+	features['url_length'] = len(url)
+	features['num_special_chars'] = len(re.findall(r'[@\-_\.]', url))
+	features['has_https'] = 1 if url.startswith("https") else 0
+	
+	parsed = urlparse(url)
+	features['num_subdomains'] = len(parsed.netloc.split('.')) - 2
+	
+	suspicious_keywords = ['login', 'secure', 'verify', 'bank']
+	features['has_suspicious_keywords'] = int(
+	any(word in url.lower() for word in suspicious_keywords)
+	)
+	
+	return features
+\end{lstlisting}
+
+\section{Machine Learning Training Code}
+
+\begin{lstlisting}[language=Python, caption=Random Forest Model Training for URL Classification, label=lst:ml_training]
+	import pandas as pd
+	from sklearn.ensemble import RandomForestClassifier
+	from sklearn.model_selection import train_test_split
+	import joblib
+	
+	def load_dataset(path):
+	data = pd.read_csv(path)
+	X = data.drop("label", axis=1)
+	y = data["label"]
+	return X, y
+	
+	def train_model(X, y):
+	X_train, X_test, y_train, y_test = train_test_split(
+	X, y, test_size=0.2, random_state=42
+	)
+	
+	model = RandomForestClassifier(
+	n_estimators=100,
+	random_state=42
+	)
+	
+	model.fit(X_train, y_train)
+	
+	joblib.dump(model, "phishing_model.pkl")
+	return model
+\end{lstlisting}
+
+\section{Model Retraining Pipeline}
+
+\begin{lstlisting}[language=Python, caption=Feedback-based Model Retraining Pipeline, label=lst:retrain_pipeline]
+	def retrain_model():
+	base_data = pd.read_csv("data/url_dataset.csv")
+	feedback_data = pd.read_csv("data/approved_feedback.csv")
+	
+	combined_data = pd.concat([base_data, feedback_data])
+	
+	X = combined_data.drop("label", axis=1)
+	y = combined_data["label"]
+	
+	model = train_model(X, y)
+	print("Model retrained successfully")
+	
+	return model
+\end{lstlisting}
+
+\section{Flask API Endpoint Example}
+
+\begin{lstlisting}[language=Python, caption=Flask API Endpoint for URL Analysis, label=lst:flask_api]
+	from flask import Flask, request, jsonify
+	
+	app = Flask(__name__)
+	
+	@app.route("/api/analyze-url", methods=["POST"])
+	def analyze_url():
+	data = request.get_json()
+	url = data.get("url")
+	features = extract_features(url)
+	prediction = model.predict([list(features.values())])[0]
+	return jsonify({
+		"url": url,
+		"prediction": int(prediction)
+	})
+\end{lstlisting}
+
+\section{Admin Model Retraining Endpoint}
+
+\begin{lstlisting}[language=Python, caption=Admin Endpoint for Model Retraining, label=lst:admin_retrain]
+	@app.route("/api/admin/retrain-model", methods=["POST"])
+	def retrain():
+	try:
+	retrain_model()
+	return jsonify({"message": "Model retrained successfully"})
+	except Exception as e:
+	return jsonify({"error": str(e)}), 500
+\end{lstlisting}

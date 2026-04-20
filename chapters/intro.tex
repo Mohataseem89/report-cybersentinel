@@ -1,0 +1,74 @@
+\chapter{Introduction}
+
+CyberSentinel is an advanced cybersecurity solution that leverages machine learning algorithms and heuristic analysis to provide real-time URL threat detection and classification. The system identifies malicious websites across four threat categories: \textit{benign, defacement, malware, and phishing attacks}, utilizing a comprehensive web application interface and community-driven feedback mechanisms for continuous model improvement.
+
+\section{Background and Motivation}
+
+The surge of cyber threats and malicious URLs poses a serious and escalating risk in today’s digital ecosystem. With over 1.7 billion websites online and millions of new URLs created every day, traditional security tools cannot keep pace with advanced attacks. In 2024, phishing accounted for nearly a quarter of all reported cyber incidents worldwide and was tied with the use of stolen credentials as a leading cause of breaches, according to the IBM X-Force Threat Intelligence Index \cite{ibm2024}.
+
+Current URL detection methods struggle with high false positives, slow adaptation to novel threats, and dependence on static blacklists that quickly lag behind adversarial techniques. The growing use of domain-generation algorithms and URL-shortening services further undermine these defensive approaches.
+
+CyberSentinel is motivated by the urgent need for an adaptive cybersecurity solution that combines the efficiency of heuristic methods with the precision of machine learning. By leveraging real-time feedback and automated continuous learning, the system is designed to address the evolving threat landscape and deliver robust protection for users and organizations alike.
+
+\section{Problem Statement}
+
+The primary problem addressed by CyberSentinel is the inadequate detection and classification of malicious URLs in real-time environments. Existing cybersecurity solutions suffer from several critical limitations:
+
+\begin{enumerate}
+	\item \textbf{Low Detection Accuracy:} Traditional rule-based systems achieve accuracy rates below 70\%, resulting in numerous false positives and negatives that compromise user trust and system effectiveness.
+	
+	\item \textbf{Static Detection Methods:} Current systems rely on predetermined patterns and signatures that cannot adapt to evolving threat landscapes or novel attack vectors.
+	
+	\item \textbf{Lack of Real-time Processing:} Many security solutions require extensive processing time, making them unsuitable for real-time URL analysis during web browsing.
+	
+	\item \textbf{Limited Threat Categories:} Existing systems often focus on binary classification (malicious/benign) without distinguishing between specific threat types such as phishing, malware distribution, or website defacement.
+	
+	\item \textbf{Absence of Community Intelligence:} Traditional systems lack mechanisms to incorporate user feedback and community-driven threat intelligence for continuous improvement.
+\end{enumerate}
+
+\section{Research Objectives}
+
+\begin{enumerate}
+	\item \textbf{Develop Advanced ML Classification:} Create and implement machine learning models capable of achieving $\geq$95\% accuracy in classifying URLs across four distinct threat categories (benign, defacement, malware, phishing).
+	
+	\item \textbf{Real-time Analysis System:} Design and implement a high-performance system capable of analyzing URLs with sub-100ms response times suitable for real-time web browsing protection.
+	
+	\item \textbf{Comprehensive Feature Engineering:} Develop robust feature extraction mechanisms that analyze lexical, structural, host-based, and behavioral characteristics of URLs to maximize detection accuracy.
+	
+	\item \textbf{Community-driven Learning:} Implement a feedback mechanism that enables continuous model improvement through user-contributed threat intelligence and false positive/negative reporting.
+\end{enumerate}
+
+\section{Scope and Limitations}
+
+\subsection{Project Scope}
+
+CyberSentinel provides:
+
+\textbf{Technical Features:}
+\begin{itemize}
+	\item Machine learning models for URL threat classification using supervised algorithms
+	\item MERN stack web application with Flask microservice integration
+	\item Real-time analysis system with sub-100ms response times
+	\item Community feedback mechanisms for continuous improvement
+	\item Responsive user interface for multiple devices
+\end{itemize}
+
+\textbf{Core Functionality:}
+\begin{itemize}
+	\item URL threat classification (benign, defacement, malware, phishing)
+	\item Real-time detection with confidence scoring
+	\item User feedback collection and statistical reporting
+	\item Educational security awareness features
+\end{itemize}
+
+\subsection{Limitations}
+
+\begin{itemize}
+	\item Model accuracy depends on training dataset quality and completeness
+	\item URL-based analysis only; no deep content inspection or dynamic behavior analysis
+	\item Zero-day threats may evade detection until model retraining
+	\item Optimized for English domains; reduced effectiveness with internationalized names
+	\item Requires continuous internet connectivity for real-time analysis
+	\item Minimal processing latency in resource-constrained environments
+	\item Privacy considerations for processing user browsing data
+\end{itemize}

@@ -1,0 +1,248 @@
+\chapter{Theory, Methodology and Algorithm}
+
+\section{Theory}
+
+Phishing detection is a critical area in cybersecurity that focuses on identifying malicious URLs designed to deceive users and steal sensitive information. Traditional approaches rely on blacklist-based systems, which are limited in detecting newly generated or zero-day attacks.
+
+Machine Learning (ML) provides a more robust solution by learning patterns from previously known malicious and benign URLs. Classification algorithms analyze features extracted from URLs such as lexical structure, domain information, and statistical patterns to determine whether a URL is safe or harmful.
+
+The CyberSentinel system is based on the concept of supervised learning, where a model is trained on labeled data (benign and phishing URLs). The trained model then predicts the class of unseen URLs. Additionally, integrating external threat intelligence APIs enhances detection reliability by validating results against global threat databases.
+
+The hybrid approach combines:
+\begin{itemize}
+	\item Data-driven learning (Machine Learning)
+	\item Knowledge-based detection (APIs)
+	\item Adaptive learning (User feedback)
+\end{itemize}
+
+This combination improves detection accuracy and reduces false positives.
+This chapter describes the experimental setup, methodology, implementation, and evalua-
+tion of the CyberSentinel phishing detection system. The system focuses on detecting malicious
+URLs using a hybrid approach combining machine learning, threat intelligence APIs, and user
+feedback
+
+\section{Present Investigation}
+
+\subsection{Experimental Setup}
+
+\subsubsection{Dataset Description}
+
+The CyberSentinel system utilizes a dataset of labeled URLs categorized into benign and phishing classes. The dataset consists of URLs collected from publicly available phishing repositories and legitimate website sources.
+
+Additionally, the system incorporates a dynamic dataset generated from user feedback. Approved feedback entries are merged with the base dataset to continuously improve model performance.
+
+\begin{table}[H]
+	\centering
+	\caption{Dataset Summary for URL Classification}
+	\begin{tabular}{lcc}
+		\toprule
+		\textbf{Category} & \textbf{Count} & \textbf{Description} \\
+		\midrule
+		Benign URLs & 50,000+ & Legitimate websites \\
+		Phishing URLs & 50,000+ & Malicious / phishing websites \\
+		Total & 100,000+ & Combined dataset \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\textbf{Dataset Characteristics:}
+\begin{itemize}
+	\item URL-based dataset with labeled classes (Benign / Phishing)
+	\item Features extracted from URL structure and domain properties
+	\item Additional data generated through user feedback system
+\end{itemize}
+
+\subsubsection{Feature Extraction}
+
+Instead of raw data, the system uses engineered features derived from URLs. These include:
+
+\begin{itemize}
+	\item URL length
+	\item Number of special characters
+	\item Presence of suspicious keywords
+	\item Number of subdomains
+	\item Domain characteristics
+\end{itemize}
+
+\subsection{Methodology}
+
+The CyberSentinel system follows a structured multi-layered methodology:
+
+\begin{table}[H]
+	\centering
+	\caption{Extracted URL Features}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Feature} & \textbf{Description} \\
+		\midrule
+		URL Length & Total number of characters \\
+		Special Characters & Count of symbols like @, -, \_ \\
+		Subdomains & Number of domain levels \\
+		Suspicious Keywords & Presence of phishing keywords \\
+		HTTPS Usage & Whether URL uses secure protocol \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\textbf{Step 1: Data Collection}
+\begin{itemize}
+	\item Collect labeled datasets of benign and phishing URLs
+	\item Incorporate user feedback data after validation
+\end{itemize}
+
+\textbf{Step 2: Data Preprocessing}
+\begin{itemize}
+	\item Clean and normalize URL data
+	\item Remove duplicates and invalid entries
+\end{itemize}
+
+\textbf{Step 3: Feature Extraction}
+\begin{itemize}
+	\item Extract lexical and domain-based features
+	\item Convert URLs into numerical feature vectors
+\end{itemize}
+
+\textbf{Step 4: Model Training}
+\begin{itemize}
+	\item Train Random Forest classifier
+	\item Optimize parameters
+\end{itemize}
+
+\textbf{Step 5: Hybrid Detection}
+\begin{itemize}
+	\item ML-based prediction
+	\item VirusTotal API validation
+	\item Content-based analysis
+\end{itemize}
+
+\textbf{Step 6: Feedback Integration}
+\begin{itemize}
+	\item Collect user feedback
+	\item Retrain model periodically
+\end{itemize}
+
+\textbf{Step 7: Final Decision}
+\begin{itemize}
+	\item Combine all results
+	\item Generate final classification
+\end{itemize}
+
+\subsection{Algorithm Used}
+
+\textbf{Algorithm: Random Forest Classifier}
+
+Random Forest is an ensemble learning algorithm that builds multiple decision trees and combines their outputs.
+
+\textbf{Working Principle:}
+\begin{itemize}
+	\item Multiple decision trees are created
+	\item Each tree makes a prediction
+	\item Final output is based on majority voting
+\end{itemize}
+
+\textbf{Pseudo-Code:}
+
+\begin{verbatim}
+	Input: Training dataset D
+	Output: Trained Random Forest model
+	
+	For i = 1 to N:
+	Select random sample Di
+	Train decision tree Ti
+	
+	For new URL:
+	Extract features
+	Get predictions
+	Final = Majority vote
+\end{verbatim}
+
+\textbf{Advantages:}
+\begin{itemize}
+	\item High accuracy
+	\item Handles large data efficiently
+	\item Reduces overfitting
+\end{itemize}
+
+\subsection{Implementation Details}
+
+\subsubsection{Data Processing Pipeline}
+
+\begin{enumerate}
+	\item Load dataset
+	\item Load feedback data
+	\item Merge datasets
+	\item Extract features
+	\item Train model
+	\item Save model (.pkl)
+\end{enumerate}
+
+\subsubsection{Model Retraining Process}
+
+\begin{itemize}
+	\item User submits feedback
+	\item Admin approves
+	\item Data added to dataset
+	\item Model retrained
+	\item Updated model deployed
+\end{itemize}
+
+\subsection{Prediction Workflow}
+
+\begin{enumerate}
+	\item User enters URL
+	\item Backend processes request
+	\item Feature extraction + ML prediction
+	\item API + content analysis
+	\item Final result generated
+\end{enumerate}
+
+\subsection{Experimental Results}
+
+\begin{itemize}
+	\item Threat score
+	\item Classification label
+	\item Detailed analysis
+\end{itemize}
+
+\begin{table}[H]
+	\centering
+	\caption{Model Performance Metrics}
+	\begin{tabular}{lc}
+		\toprule
+		\textbf{Metric} & \textbf{Value} \\
+		\midrule
+		Accuracy & 95\% \\
+		Precision & 93\% \\
+		Recall & 92\% \\
+		F1-Score & 92.5\% \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsection{System Performance}
+
+\begin{itemize}
+	\item Real-time response
+	\item Low latency
+	\item Scalable architecture
+\end{itemize}
+
+\subsection{Discussion of Findings}
+
+\begin{itemize}
+	\item Hybrid detection improves accuracy
+	\item Feedback enables continuous learning
+	\item Real-time integration enhances security
+\end{itemize}
+
+\textbf{Limitations:}
+\begin{itemize}
+	\item Feedback impact is gradual
+	\item API dependency affects results
+\end{itemize}
+
+\subsection{Conclusion}
+
+The CyberSentinel system successfully demonstrates a real-time phishing detection framework combining machine learning, external threat intelligence, and user feedback.
+
+The system is scalable, adaptive, and capable of continuous improvement, making it suitable for modern cybersecurity applications.

@@ -1,0 +1,211 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{arxiv5}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a4ddd8378ae1cc6a3c1709e3dad9f998}{%
+           family={Leand\bibnamedelima Tha¸ci1},
+           familyi={L\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Kamer\bibnamedelima Vishi},
+           giveni={K\bibinitperiod\bibinitdelim V\bibinitperiod},
+           suffix={Arbnor\bibnamedelima Halili1},
+           suffixi={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=299afaa1ae1b69ab459a4fbdd2bb291a}{%
+           family={Rexha},
+           familyi={R\bibinitperiod},
+           given={Blerim},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{0abd922b7b909597c103d3e6cb44ff3e}
+      \strng{fullhash}{0abd922b7b909597c103d3e6cb44ff3e}
+      \strng{bibnamehash}{0abd922b7b909597c103d3e6cb44ff3e}
+      \strng{authorbibnamehash}{0abd922b7b909597c103d3e6cb44ff3e}
+      \strng{authornamehash}{0abd922b7b909597c103d3e6cb44ff3e}
+      \strng{authorfullhash}{0abd922b7b909597c103d3e6cb44ff3e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Springer Nature}
+      \field{title}{Efficient Chrome Extension for Phishing Detection Using Machine Learning Techniques}
+      \field{year}{2024}
+    \endentry
+    \entry{arxiv}{article}{}
+      \name{author}{8}{}{%
+        {{hash=a332ee5684f777c320c613e261c3937b}{%
+           family={Alazaidah},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6ceb97235b7487fb3ba4bf2d934b7a75}{%
+           family={Al-Shaikh},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=67add93c855e7510dbc1d8dec42ec3fd}{%
+           family={AL-Mousa},
+           familyi={A\bibinithyphendelim M\bibinitperiod},
+           given={M.\bibnamedelimi R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=5a8180233f061e2ff780846154bfa5f4}{%
+           family={Khafajah},
+           familyi={K\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0cbc7204e4cecb5b03bce00256d58978}{%
+           family={Samara},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5f1fe2fc499dabd9947d2ceb078eb03b}{%
+           family={Alzyoud},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6d60cb9595ea4a333bc19f2ed67bf185}{%
+           family={Al-Shanableh},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=1bd7a364f386bb8e289dcbb6facb9cd2}{%
+           family={Almatarneh},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Natural Sciences Publishing Corporation}%
+      }
+      \strng{namehash}{ec8cd2b0187b02549763bfef948a6e44}
+      \strng{fullhash}{347331db9d9b772d6211609729e5f20f}
+      \strng{bibnamehash}{ec8cd2b0187b02549763bfef948a6e44}
+      \strng{authorbibnamehash}{ec8cd2b0187b02549763bfef948a6e44}
+      \strng{authornamehash}{ec8cd2b0187b02549763bfef948a6e44}
+      \strng{authorfullhash}{347331db9d9b772d6211609729e5f20f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistics Applications \& Probability}
+      \field{title}{Website Phishing Detection Using Machine Learning Techniques}
+      \field{year}{2024}
+    \endentry
+    \entry{IEEE}{article}{}
+      \name{author}{7}{}{%
+        {{hash=ba3bf6f1424338c0f0ece853ae3fa602}{%
+           family={Naseeb},
+           familyi={N\bibinitperiod},
+           given={Saba},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed01f2eb217477d90f39731b77b3c947}{%
+           family={Ramzan},
+           familyi={R\bibinitperiod},
+           given={Shabana},
+           giveni={S\bibinitperiod}}}%
+        {{hash=48f40823d6145aac0cd393ba9b2a8975}{%
+           family={Raza},
+           familyi={R\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=06680f21d53ae24e57b56ee0cfc898ff}{%
+           family={Hashmi},
+           familyi={H\bibinitperiod},
+           given={Muhammad\bibnamedelimb Shadab\bibnamedelima Alam},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=105cf7eacd347e3c4d29cb29dd977fdc}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Yeonghyeon},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e65985bcc8442e6c8194f01eaeb4589d}{%
+           family={Syafrudin},
+           familyi={S\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=19e60d8f5db656bd3e6814203f9032c8}{%
+           family={Fitriyani},
+           familyi={F\bibinitperiod},
+           given={Norma\bibnamedelima Latif},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c18e544e5da2a5df161364144008d653}
+      \strng{fullhash}{6e1070aced5deea3c054b670b16b926d}
+      \strng{bibnamehash}{c18e544e5da2a5df161364144008d653}
+      \strng{authorbibnamehash}{c18e544e5da2a5df161364144008d653}
+      \strng{authornamehash}{c18e544e5da2a5df161364144008d653}
+      \strng{authorfullhash}{6e1070aced5deea3c054b670b16b926d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Website Phishing Attack Detection Using Innovative Meta Learning-Based Ensemble Approach}
+      \field{year}{2025}
+    \endentry
+    \entry{llm}{article}{}
+      \name{author}{5}{}{%
+        {{hash=a83c77a3346d64290b5d06ca5c73bd62}{%
+           family={Rauf},
+           familyi={R\bibinitperiod},
+           given={Sineefa},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1791b8095b36028e3ba9de3f27ed2f73}{%
+           family={Muneer},
+           familyi={M\bibinitperiod},
+           given={Munzir},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9afed541ae30fbb54275b81036e96500}{%
+           family={Suseenthiran},
+           familyi={S\bibinitperiod},
+           given={Kajavahini},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ffebdbcfcbc8c5513d6d245865d04517}{%
+           family={Weerasinghe},
+           familyi={W\bibinitperiod},
+           given={Thilina},
+           giveni={T\bibinitperiod}}}%
+        {{hash=005d63e5b40e64b412d40a79f12b5d2f}{%
+           family={Rashid},
+           familyi={R\bibinitperiod},
+           given={Fariza},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5dda971b2c57356904c0e27ae080076}
+      \strng{fullhash}{d4a78930edde247caa5ee2bbfe7ea10c}
+      \strng{bibnamehash}{d4a78930edde247caa5ee2bbfe7ea10c}
+      \strng{authorbibnamehash}{d4a78930edde247caa5ee2bbfe7ea10c}
+      \strng{authornamehash}{c5dda971b2c57356904c0e27ae080076}
+      \strng{authorfullhash}{d4a78930edde247caa5ee2bbfe7ea10c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Can LLM-Embeddings Detect Phishing URLs?}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
